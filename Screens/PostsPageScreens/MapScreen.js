@@ -1,9 +1,9 @@
-import { useIsFocused } from '@react-navigation/native';
-import { useEffect, useState } from 'react';
-import { Dimensions } from 'react-native';
-import { StyleSheet, Text } from 'react-native';
-import { View } from 'react-native';
-import MapView, { Marker } from 'react-native-maps';
+import { useIsFocused } from "@react-navigation/native";
+import { useEffect, useState } from "react";
+import { Dimensions } from "react-native";
+import { StyleSheet, Text } from "react-native";
+import { View } from "react-native";
+import MapView, { Marker } from "react-native-maps";
 
 const MapScreen = ({ route, navigation }) => {
   const isFocused = useIsFocused();
@@ -12,8 +12,8 @@ const MapScreen = ({ route, navigation }) => {
 
   useEffect(() => {
     if (isFocused) {
-      navigation?.getParent('home')?.setOptions({
-        tabBarStyle: { display: 'none' },
+      navigation?.getParent("home")?.setOptions({
+        tabBarStyle: { display: "none" },
         headerShown: false,
       });
     }
@@ -27,9 +27,8 @@ const MapScreen = ({ route, navigation }) => {
         style={styles.map}
         initialRegion={{
           // ...location,
-
-          latitude: 48.383022,
-          longitude: 31.1828699,
+          latitude: 49.419444,
+          longitude: 26.979444,
           latitudeDelta: 0.006,
           longitudeDelta: 0.006,
         }}
@@ -45,12 +44,12 @@ export default MapScreen;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "#fff",
+    alignItems: "center",
+    justifyContent: "center",
   },
   map: {
-    width: Dimensions.get('window').width,
-    height: Dimensions.get('window').height,
+    width: Dimensions.get("window").width,
+    height: Dimensions.get("window").height,
   },
 });

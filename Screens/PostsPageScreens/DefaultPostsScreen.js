@@ -1,26 +1,31 @@
-import { FlatList, Image } from 'react-native';
-import { Dimensions, Keyboard, KeyboardAvoidingView, StyleSheet } from 'react-native';
-import { Text, View } from 'react-native';
+import { FlatList, Image } from "react-native";
+import {
+  Dimensions,
+  Keyboard,
+  KeyboardAvoidingView,
+  StyleSheet,
+} from "react-native";
+import { Text, View } from "react-native";
 
-import { useEffect, useState } from 'react';
-import PostsItem from '../../components/PostsItem/PostsItem';
+import { useEffect, useState } from "react";
+import PostsItem from "../../components/PostsItem/PostsItem";
 
 const DefaultPostsScreen = ({ route }) => {
   const [posts, setPosts] = useState([
     {
-      id: 'ksdlflsdnfsldjnfdjfsjdkfn',
+      id: "ksdlflsdnfsldjnfdjfsjdkfn",
       postImg:
-        'file:///data/user/0/host.exp.exponent/cache/ExperienceData/%2540anonymous%252Fgoit-react-native-hw-05-dbed3e8b-5429-4e6e-a6ba-fefe43283569/Camera/1609f830-6073-4560-8596-6f26f450b3a3.jpg',
-      postName: 'олл',
-      postAddress: 'Ucraine',
-      postLocation: { latitude: 48.383022, longitude: 31.1828699 },
+        "file:///data/user/0/host.exp.exponent/cache/ExperienceData/%2540anonymous%252Fgoit-react-native-hw-05-dbed3e8b-5429-4e6e-a6ba-fefe43283569/Camera/1609f830-6073-4560-8596-6f26f450b3a3.jpg",
+      postName: "Хмельницький",
+      postAddress: "Ukraine",
+      postLocation: { latitude: 49.419444, longitude: 26.979444 },
     },
   ]);
 
   useEffect(() => {
     if (!route.params) return;
 
-    setPosts(prev => [...prev, route.params]);
+    setPosts((prev) => [...prev, route.params]);
   }, [route.params]);
 
   return (
@@ -59,11 +64,11 @@ const styles = StyleSheet.create({
     paddingHorizontal: 16,
     paddingTop: 32,
 
-    backgroundColor: '#fff',
+    backgroundColor: "#fff",
   },
   avatarWrapper: {
-    flexDirection: 'row',
-    alignItems: 'center',
+    flexDirection: "row",
+    alignItems: "center",
     marginBottom: 32,
   },
   avatarImg: {
@@ -72,25 +77,25 @@ const styles = StyleSheet.create({
 
     marginRight: 8,
 
-    backgroundColor: '#f6f6f6',
+    backgroundColor: "#f6f6f6",
     borderRadius: 16,
   },
   avatarName: {
-    fontFamily: 'Roboto',
-    fontStyle: 'normal',
+    fontFamily: "Roboto",
+    fontStyle: "normal",
     fontWeight: 700,
     fontSize: 13,
     lineHeight: 15,
 
-    color: '#212121',
+    color: "#212121",
   },
   avatarEmail: {
-    fontFamily: 'Roboto',
-    fontStyle: 'normal',
+    fontFamily: "Roboto",
+    fontStyle: "normal",
     fontWeight: 400,
     fontSize: 11,
     lineHeight: 13,
 
-    color: 'rgba(33, 33, 33, 0.8)',
+    color: "rgba(33, 33, 33, 0.8)",
   },
 });

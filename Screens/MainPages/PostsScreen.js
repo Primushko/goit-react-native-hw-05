@@ -1,23 +1,26 @@
-import { createStackNavigator } from '@react-navigation/stack';
-import { Text, View } from 'react-native';
-import DefaultPostsScreen from '../PostsPageScreens/DefaultPostsScreen';
-import CommentsScreen from '../PostsPageScreens/CommentsScreen';
-import MapScreen from '../PostsPageScreens/MapScreen';
-import { StyleSheet } from 'react-native';
-import SvgArrowLeft from '../../assets/svg/SvgArrowLeft';
+import { createStackNavigator } from "@react-navigation/stack";
+import DefaultPostsScreen from "../PostsPageScreens/DefaultPostsScreen";
+import CommentsScreen from "../PostsPageScreens/CommentsScreen";
+import MapScreen from "../PostsPageScreens/MapScreen";
+import { StyleSheet } from "react-native";
+import SvgArrowLeft from "../../assets/svg/SvgArrowLeft";
+// import { Text, View } from 'react-native';
 
 const NestedScreen = createStackNavigator();
 
 const PostsScreen = ({ navigation }) => {
   return (
-    <NestedScreen.Navigator initialRouteName="DefaultPosts" screenOptions={{ headerShown: false }}>
+    <NestedScreen.Navigator
+      initialRouteName="DefaultPosts"
+      screenOptions={{ headerShown: false }}
+    >
       <NestedScreen.Screen name="DefaultPosts" component={DefaultPostsScreen} />
       <NestedScreen.Screen
         name="Comments"
         component={CommentsScreen}
         options={{
           ...screenOptions,
-          title: 'Коментарі',
+          title: "Коментарі",
           headerLeft: () => (
             <SvgArrowLeft
               onPress={() => navigation.goBack()}
@@ -33,7 +36,7 @@ const PostsScreen = ({ navigation }) => {
         component={MapScreen}
         options={{
           ...screenOptions,
-          title: 'Карта',
+          title: "Карта",
           headerLeft: () => (
             <SvgArrowLeft
               onPress={() => navigation.goBack()}
@@ -56,7 +59,7 @@ export default PostsScreen;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: "#fff",
   },
   arrowLeft: {
     marginLeft: 16,
@@ -70,17 +73,16 @@ const screenOptions = {
   headerShown: true,
   headerStyle: {
     borderBottomWidth: 0.5,
-    borderBottomColor: 'rgba(0, 0, 0, 0.3)',
-    boxShadow: '0px 0.5px 0px rgba(0, 0, 0, 0.3)',
+    borderBottomColor: "rgba(0, 0, 0, 0.3)",
+    boxShadow: "0px 0.5px 0px rgba(0, 0, 0, 0.3)",
   },
-  headerTintColor: '#212121',
+  headerTintColor: "#212121",
   headerTitleStyle: {
-    fontFamily: 'Roboto',
-    fontStyle: 'normal',
-    fontWeight: 'bold',
+    fontFamily: "Roboto",
+    fontStyle: "normal",
+    fontWeight: "bold",
     fontSize: 17,
     lineHeight: 22,
-
-    textAlign: 'center',
+    textAlign: "center",
   },
 };
