@@ -10,20 +10,15 @@ import {
   Dimensions,
   FlatList,
 } from "react-native";
-
 import { Feather, AntDesign } from "@expo/vector-icons";
-
 import { postsScreenArray } from "../data/posts";
-
 import UserAvatar from "../image/userAvatar.jpg";
 
 const PostsScreen = () => {
   const navigation = useNavigation();
-
   const [windowWidth, setWindowWidth] = useState(
     Dimensions.get("window").width
   );
-
   const [posts, setPosts] = useState(postsScreenArray);
 
   useEffect(() => {

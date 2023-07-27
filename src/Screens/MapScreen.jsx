@@ -2,9 +2,7 @@ import React from "react";
 import { View, StyleSheet, Dimensions } from "react-native";
 import MapView, { Marker } from "react-native-maps";
 
-// Компонент для відображення карти з маркером на вказаній позиції
 export const MapScreen = ({ route }) => {
-  // Отримання координат місцезнаходження з параметрів маршруту
   const { longitude, latitude } = route.params.location;
 
   return (
@@ -14,12 +12,11 @@ export const MapScreen = ({ route }) => {
         initialRegion={{
           latitude,
           longitude,
-          latitudeDelta: 0.0922, // Зум для широти
-          longitudeDelta: 0.0421, // Зум для довготи
+          latitudeDelta: 0.0922,
+          longitudeDelta: 0.0421,
         }}
-        minZoomLevel={1} // Мінімальний рівень зуму
+        minZoomLevel={1}
       >
-        {/* Маркер, що позначає місцезнаходження */}
         <Marker title="Ти тут" coordinate={{ longitude, latitude }} />
       </MapView>
     </View>

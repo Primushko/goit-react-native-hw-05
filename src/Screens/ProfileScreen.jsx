@@ -10,26 +10,20 @@ import {
   ImageBackground,
   Dimensions,
 } from "react-native";
-
 import { Feather, AntDesign } from "@expo/vector-icons";
-
 import { useNavigation } from "@react-navigation/native";
-
 import Bg from "../image/bg-image.png";
 import UserAvatarBig from "../image/userAvatarBig.jpg";
-
 import { profilePostArray } from "../data/posts";
 
 const ProfileScreen = () => {
   const navigation = useNavigation();
-
   const [windowWidth, setWindowWidth] = useState(
     Dimensions.get("window").width
   );
   const [windowHeight, setWindowHeight] = useState(
     Dimensions.get("window").height
   );
-
   const [posts, setPosts] = useState(profilePostArray);
 
   useEffect(() => {
@@ -117,18 +111,15 @@ const ProfileScreen = () => {
                     onPress={() => navigation.navigate("Коментарі")}
                   >
                     <Feather name="message-circle" size={24} color="#FF6C00" />
-
                     <Text style={styles.statisticText}>{item.comments}</Text>
                   </TouchableOpacity>
                   <View style={{ ...styles.statisticWrap, marginLeft: 24 }}>
                     <AntDesign name="like2" size={24} color="#FF6C00" />
-
                     <Text style={styles.statisticText}>{item.likes}</Text>
                   </View>
                 </View>
                 <View style={styles.statisticWrap}>
                   <AntDesign name="enviromento" size={24} color="#BDBDBD" />
-
                   <Text style={styles.statisticText}>{item.location}</Text>
                 </View>
               </View>
@@ -138,7 +129,6 @@ const ProfileScreen = () => {
           contentContainerStyle={{
             flexGrow: 1,
             alignItems: "center",
-
             borderTopLeftRadius: 25,
             borderTopRightRadius: 25,
           }}

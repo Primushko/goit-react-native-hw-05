@@ -1,14 +1,12 @@
 import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { TouchableOpacity, View } from "react-native";
-
 import PostsScreen from "../Screens/PostsScreen";
 import CreatePostsScreen from "../Screens/CreatePostsScreen";
 import ProfileScreen from "../Screens/ProfileScreen";
-
 import { useNavigation } from "@react-navigation/native";
-
 import { FontAwesome5, AntDesign, Ionicons, Feather } from "@expo/vector-icons";
+
 const BottomTab = createBottomTabNavigator();
 export const BottomMenu = () => {
   const navigation = useNavigation();
@@ -19,7 +17,6 @@ export const BottomMenu = () => {
         tabBarShowLabel: false,
         tabBarStyle: { height: 80, justifyContent: "center" },
         headerTitleAlign: "center",
-
         headerRightContainerStyle: { paddingRight: 16, paddingBottom: 9 },
         headerLeftContainerStyle: { paddingLeft: 16, paddingBottom: 9 },
       }}

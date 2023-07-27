@@ -20,14 +20,11 @@ import * as SplashScreen from "expo-splash-screen";
 
 const LoginScreen = () => {
   const navigation = useNavigation();
-
   const [email, setEmail] = useState("");
   const [focusEmail, setIsFocusEmail] = useState(false);
-
   const [password, setPassword] = useState("");
   const [focusPassword, setFocusPassword] = useState(false);
   const [isPasswordHidden, setIsPasswordHidden] = useState(true);
-
   const [phoneWidth, setPhoneWidth] = useState(Dimensions.get("window").width);
   const [phoneHeight, setPhoneHeight] = useState(
     Dimensions.get("window").height
@@ -41,11 +38,11 @@ const LoginScreen = () => {
       setPhoneHeight(height);
     };
     const addListener = Dimensions.addEventListener("change", onChange);
+
     return () => addListener.remove();
   }, []);
   const emailSave = (email) => setEmail(email);
   const passwordSave = (password) => setPassword(password);
-
   const validateEmail = (email) => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
@@ -106,7 +103,6 @@ const LoginScreen = () => {
               >
                 <View style={{ width: phoneWidth - 16 * 2 }}>
                   <Text style={styles.title}>Увійти</Text>
-
                   <TextInput
                     style={{
                       ...styles.input,

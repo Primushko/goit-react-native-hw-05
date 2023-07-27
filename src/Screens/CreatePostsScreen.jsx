@@ -20,10 +20,8 @@ import { Camera } from "expo-camera";
 import posts from "../data/posts";
 
 const BottomTabs = createBottomTabNavigator();
-
 const CreatePost = () => {
   const navigation = useNavigation();
-
   const [postPhoto, setPostPhoto] = useState(null);
   const [photoName, setPhotoName] = useState("");
   const [photoLocationName, setPhotoLocationName] = useState("");

@@ -1,7 +1,5 @@
 import React, { useState, useEffect, useCallback } from "react";
-
 import { AntDesign } from "@expo/vector-icons";
-
 import * as SplashScreen from "expo-splash-screen";
 import {
   StyleSheet,
@@ -15,22 +13,16 @@ import {
   Keyboard,
   SafeAreaView,
 } from "react-native";
-
 import { TextInput } from "react-native-gesture-handler";
-
 import { commentPostArray } from "../data/posts";
 
 export const CommentsScreen = () => {
   const [windowWidth, setWindowWidth] = useState(
     Dimensions.get("window").width
   );
-
   const [posts, setPosts] = useState(commentPostArray);
-
   const [comment, setComment] = useState("");
-
   const commentHandler = (comment) => setComment(comment);
-
   const onSend = () => {
     if (!comment.trim()) {
       Alert.alert(`

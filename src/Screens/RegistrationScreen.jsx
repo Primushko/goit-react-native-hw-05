@@ -15,24 +15,18 @@ import {
   ImageBackground,
   Dimensions,
 } from "react-native";
-
 import { Octicons } from "@expo/vector-icons";
-
 import Bg from "../image/bg-image.png";
 
 const RegistrationScreen = () => {
   const navigation = useNavigation();
-
   const [login, setLogin] = useState("");
   const [focusLogin, setFocusLogin] = useState(false);
-
   const [email, setEmail] = useState("");
   const [focusEmail, setFocusEmail] = useState(false);
-
   const [password, setPassword] = useState("");
   const [focusPassword, setFocusPassword] = useState(false);
   const [isPasswordHidden, setIsPasswordHidden] = useState(true);
-
   const [phoneWidth, setPhoneWidth] = useState(Dimensions.get("window").width);
   const [phoneHeight, setPhoneHeight] = useState(
     Dimensions.get("window").height
@@ -54,12 +48,10 @@ const RegistrationScreen = () => {
   const loginSave = (login) => setLogin(login);
   const emailSave = (email) => setEmail(email);
   const passwordSave = (password) => setPassword(password);
-
   const validateEmail = (email) => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
   };
-
   const onLogin = () => {
     if (!login.trim() || !email.trim() || !password.trim()) {
       Alert.alert(`Усі поля мають бути заповнені!`);
@@ -97,7 +89,6 @@ const RegistrationScreen = () => {
                 style={{
                   ...styles.containerWrapper,
                   width: phoneWidth,
-
                   marginTop: phoneWidth > 400 ? 200 : 300,
                 }}
               >
