@@ -1,10 +1,9 @@
 import { createStackNavigator } from "@react-navigation/stack";
+import { StyleSheet } from "react-native";
 import DefaultPostsScreen from "../PostsPageScreens/DefaultPostsScreen";
 import CommentsScreen from "../PostsPageScreens/CommentsScreen";
 import MapScreen from "../PostsPageScreens/MapScreen";
-import { StyleSheet } from "react-native";
 import SvgArrowLeft from "../../assets/svg/SvgArrowLeft";
-// import { Text, View } from 'react-native';
 
 const NestedScreen = createStackNavigator();
 

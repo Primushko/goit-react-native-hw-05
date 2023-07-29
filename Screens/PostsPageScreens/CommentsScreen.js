@@ -119,9 +119,6 @@ const styles = StyleSheet.create({
     borderRadius: 8,
   },
   commentList: {
-    // borderWidth: 1,
-    // borderColor: '#f6f6f6',
-    // borderRadius: 14,
     maxHeight: 312,
     marginBottom: 28,
   },

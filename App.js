@@ -2,10 +2,8 @@ import React from "react";
 import "react-native-gesture-handler";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
-
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, View } from "react-native";
-
 import LoginScreen from "./Screens/AuthPages/LoginScreen";
 import RegistrationScreen from "./Screens/AuthPages/RegistrationScreen";
 import Home from "./Screens/Home";

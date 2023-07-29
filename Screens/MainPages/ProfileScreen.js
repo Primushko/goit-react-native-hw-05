@@ -14,7 +14,6 @@ const ProfileScreen = () => {
     const avatarImg = await DocumentPicker.getDocumentAsync({
       type: "image/*",
     });
-
     if (avatarImg.type === "cancel") return setAvatar(null);
     setAvatar(avatarImg);
   };
@@ -46,16 +45,7 @@ const ProfileScreen = () => {
 export default ProfileScreen;
 
 const styles = StyleSheet.create({
-  container: {
-    // flex: 1,
-    // paddingHorizontal: 16,
-    // paddingVertical: 32,
-    // backgroundColor: '#fff',
-  },
-
   bgContainer: {
-    // flexDirection: 'row',
-    // alignItems: 'flex-start',
     resizeMode: "cover",
     justifyContent: "center",
     width: Dimensions.get("window").width,
@@ -130,5 +120,11 @@ const styles = StyleSheet.create({
     fill: "#bdbdbd",
     stroke: "#e8e8e8",
     backgroundColor: "#ffffff",
+  },
+  container: {
+    // flex: 1,
+    // paddingHorizontal: 16,
+    // paddingVertical: 32,
+    // backgroundColor: '#fff',
   },
 });

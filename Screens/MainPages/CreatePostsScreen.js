@@ -1,12 +1,8 @@
 import { useEffect, useState } from "react";
 import { useNavigation, useIsFocused } from "@react-navigation/native";
-
 import { Camera } from "expo-camera";
 import * as MediaLibrary from "expo-media-library";
-
 import * as Location from "expo-location";
-
-// import * as DocumentPicker from 'expo-document-picker';
 import {
   Dimensions,
   Image,
@@ -14,7 +10,6 @@ import {
   KeyboardAvoidingView,
   StyleSheet,
 } from "react-native";
-
 import {
   TouchableWithoutFeedback,
   TextInput,
@@ -22,7 +17,6 @@ import {
   Text,
   View,
 } from "react-native";
-
 import SvgTrash from "../../assets/svg/SvgTrash";
 import SvgLocation from "../../assets/svg/SvgLocation";
 import SvgLoadPost from "../../assets/svg/SvgLoadPost";
@@ -87,7 +81,6 @@ const CreatePostsScreen = () => {
   const onSubmitPost = () => {
     if (!postImg || !postName.trim() || !postLocation)
       return console.warn("Будь ласка завантажте фото та заповніть поля");
-
     console.log({ postImg, postName, postAddress, postLocation });
 
     handleKeyboardHide();
@@ -110,20 +103,6 @@ const CreatePostsScreen = () => {
         console.log("Error > ", error.message);
       }
     }
-
-    // if (!cameraRef && postImg) {
-    //   try {
-    //     const avatarImg = await DocumentPicker.getDocumentAsync({
-    //       type: 'image/*',
-    //     });
-
-    //     if (avatarImg.type === 'cancel') return setPostImg('');
-
-    //     setPostImg(avatarImg);
-    //   } catch (error) {
-    //     console.log('Error > ', error.message);
-    //   }
-    // }
     addImageLocation();
   };
 
@@ -140,7 +119,6 @@ const CreatePostsScreen = () => {
     clearForm();
     navigation.goBack();
   };
-
   if (hasPermission === null) {
     return <View />;
   }
@@ -314,7 +292,6 @@ const styles = StyleSheet.create({
     position: "absolute",
     top: 0,
     left: 0,
-    // zIndex: 99,
     flex: 1,
     height: 240,
     maxHeight: 240,
@@ -400,6 +377,5 @@ const styles = StyleSheet.create({
 
     backgroundColor: "#f6f6f6",
     borderRadius: 20,
-    // backgroundColor: props.accessibilityState.selected ? '#f6f6f6' : '#ff6c00',
   },
 });

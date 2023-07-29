@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Dimensions, StyleSheet } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 import * as DocumentPicker from "expo-document-picker";
 import {
   View,
@@ -15,7 +16,6 @@ import {
 } from "react-native";
 import backgroundImg from "../../assets/img/background.jpg";
 import SvgAddButton from "../../assets/svg/SvgAddButton";
-import { useNavigation } from "@react-navigation/native";
 
 const RegistrationScreen = () => {
   const navigation = useNavigation();

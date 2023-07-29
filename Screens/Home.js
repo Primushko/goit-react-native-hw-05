@@ -1,13 +1,10 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { TouchableOpacity, StyleSheet } from "react-native";
-
 import PostScreen from "./MainPages/PostsScreen";
 import CreatePostsScreen from "./MainPages/CreatePostsScreen";
 import ProfileScreen from "./MainPages/ProfileScreen";
-
 import SvgArrowLeft from "../assets/svg/SvgArrowLeft";
 import SvgLogOut from "../assets/svg/SvgLogOut";
-
 import SvgGrid from "../assets/svg/SvgGrid";
 import SvgPlus from "../assets/svg/SvgPlus";
 import SvgUser from "../assets/svg/SvgUser";
@@ -126,11 +123,6 @@ const Home = () => {
 export default Home;
 
 const styles = StyleSheet.create({
-  // container: {
-  //   flex: 1,
-  //   alignItems: 'center',
-  //   justifyContent: 'center',
-  // },
   arrowLeft: {
     marginLeft: 16,
     marginRight: 42,
@@ -142,7 +134,6 @@ const styles = StyleSheet.create({
     height: 24,
     marginRight: 60,
     marginRight: 16,
-    // paddingHorizontal: 16,
     paddingVertical: 10,
   },
   btnTab: {
@@ -157,16 +148,6 @@ const styles = StyleSheet.create({
     backgroundColor: "#ffffff",
     borderRadius: 20,
   },
-  // btnActiveTab: {
-  //   alignSelf: 'center',
-  //   marginRight: 30,
-  //   width: 70,
-  //   height: 40,
-  //   paddingVertical: 8,
-  //   paddingHorizontal: 23,
-  //   backgroundColor: '#ff6c00',
-  //   borderRadius: 20,
-  // },
 });
 
 const createPostsOptions = {
